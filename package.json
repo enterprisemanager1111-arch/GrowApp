@@ -6,10 +6,15 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "client": "expo start",
+    "backend": "node ./backend/onboarding.js",
+    "publish": "concurrently \"npm run client\" \"npm run backend\""
+
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.96.0",
+    "concurrent": "^0.3.2",
     "cors": "^2.8.6",
     "discord.js": "^14.25.1",
     "dotenv": "^17.2.3",
